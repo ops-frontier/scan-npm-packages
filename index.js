@@ -38,7 +38,7 @@ function loadPackageList() {
     if (!cols[0] || cols[0] === 'パッケージ名' || /^-+$/.test(cols[0])) continue;
     pkgs.add(cols[0]);
     if (cols[1]) {
-      contaminatedVersions.set(cols[0], new Set(cols[1].split(/\s+/).filter(Boolean)));
+      contaminatedVersions.set(cols[0], new Set(cols[1].split(',').map(v => v.trim()).filter(Boolean)));
     }
   }
   return { pkgs, contaminatedVersions };
