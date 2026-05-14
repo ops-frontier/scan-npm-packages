@@ -1,0 +1,16 @@
+{
+  "name": "scan-npm-packages",
+  "version": "1.0.0",
+  "description": "Shai-Hulud に汚染されたパッケージを含むレジストリを探すツール",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
